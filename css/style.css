@@ -1,0 +1,816 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap');
+/*-------------------------- Starting Global Section ---------------------------*/
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+:root {
+    --bodyColor: #fffbf2;
+    --lightCoffee: #da9f5b;
+    --darkCoffee: #33211d;
+    --smallText: #555555;
+    --small: 1rem;
+    --medium: 2rem;
+    --large: 2.5rem;
+    --xlarge: 4.5rem;
+    --xxxlarge: 10rem;
+    background-color: var(--bodyColor);
+}
+
+.container {
+    width: 90%;
+    margin: auto;
+}
+
+ul {
+    padding: 0;
+}
+
+/* Fonts */
+.smallFont {
+    font-size: var(--small);
+    line-height: 25px;
+    /* color: var(--smallText); */
+}
+
+.mediumFont {
+    font-size: var(--medium);
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+.largeFont {
+    font-size: var(--large);
+    font-weight: 500;
+    color: white;
+    margin: 0;
+}
+
+.xlargeFont {
+    font-size: var(--xlarge);
+    font-weight: 700;
+    color: var(--lightCoffee);
+    margin: 0;
+}
+/* Fonts */
+
+/* Start Section Title */
+.sectionTitle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 100px;
+}
+
+.sectionTitle .verticalLine {
+    width: 3px;
+    height: 100px;
+    background-color: var(--lightCoffee);
+    margin: 120px 0px 20px;
+}
+
+.sectionTitle > p:first-of-type {
+    font-size: var(--medium);
+    color: var(--lightCoffee);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 0.3rem;
+    margin: 0;
+}
+
+.sectionTitle > p:last-of-type {
+    font-size: var(--xlarge);
+    color: var(--darkCoffee);
+    font-weight: 700;
+    margin: 15px 0;
+}
+/* End Section Title */
+
+/*--------------------------- Ending Global Section ----------------------------*/
+
+/* Start Background Image */
+.backImage {
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(51,33,29, 0.5),
+    rgba(51,33,29, 0.5)), url(../image/carousel-1.jpg);
+    background-position: center;
+    min-height: 100vh;
+}
+
+.backImage::after {
+    content: "";
+    position: absolute;
+    background-image: url(../image/overlay-bottom.png);
+    bottom: -1px;
+    width: 100%;
+    height: 15px;
+}
+/* End Background Image */
+
+/* Starting Header */
+header {
+    padding: 30px;
+    min-height: 115px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+header .brandTitle {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: var(--large);
+    color: white;
+}
+
+header .navbar {
+    margin-right: 50px;
+}
+
+header .navbar .navbarLinks {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+header .navbar .link {
+    list-style: none;
+    padding: 0 20px;
+    font-size: 20px;
+}
+
+header .navbar .link a{
+    text-decoration: none;
+    color: white;
+}
+
+header .navbar li:first-child a{
+    color: var(--lightCoffee);
+}
+
+.toggleButton {
+    position: absolute;
+    top: 2.5rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 31px;
+    height: 21px;
+}
+
+.toggleButton .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+/* Ending Header */
+
+/* Starting Main */
+main {
+    display: flex;
+    flex-direction: column;
+    min-height: 700px;
+    align-items: center;
+    justify-content: center;
+}
+
+main > p {
+    color: var(--lightCoffee);
+}
+
+main h1 {
+    text-transform: uppercase;
+    font-size: var(--xxxlarge);
+    font-weight: 600;
+    letter-spacing: 0.2rem;
+    color: white;
+    margin: 0;
+}
+
+main > p:last-child {
+    color: white;
+}
+/* Ending Main */
+
+/* Start About Section */
+.aboutSection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.ourStory,
+.ourVision {
+    flex-basis: 420px;
+    display: flex;
+    flex-direction: column;
+}
+
+.ourStory p:nth-child(1),
+.ourVision p:first-of-type {
+    font-size: var(--large);
+    font-weight: 700;
+    color: var(--darkCoffee);
+    margin: 0;
+}
+
+.ourStory p:nth-child(3),
+.ourVision p:last-of-type {
+    color: var(--smallText);
+}
+
+.ourStory p:nth-child(2) {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--darkCoffee);
+    line-height: 28px;
+}
+
+.ourStory > button {
+    width: 180px;
+    height: 50px;
+    color: white;
+    background-color: var(--darkCoffee);
+    border: none;
+    cursor: pointer;
+}
+
+.ourVision > button {
+    width: 180px;
+    height: 50px;
+    color: black;
+    background-color: var(--lightCoffee);
+    border: none;
+    cursor: pointer;
+}
+
+.ourVision li {
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--darkCoffee);
+    line-height: 40px;
+}
+
+.ourVision li i {
+    color: var(--lightCoffee);
+    font-size: 1.3rem;
+    margin: 0 5px 0 0;
+}
+/* End About Section */
+
+/* Start Our Services Section */
+.ourServices {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ourServices .services {
+    flex-basis: 50%;
+}
+
+.ourServices .services img {
+    float: left;
+    width: 220px;
+    margin: 0 50px 60px;
+}
+
+.ourServices .services p:first-of-type {
+    font-size: var(--medium);
+    font-weight: 500;
+    color: var(--darkCoffee);
+    margin-top: 0;
+}
+
+.ourServices .services p i {
+    background-color: var(--lightCoffee);
+    text-align: center;
+    line-height: 70px;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    margin-right: 15px;
+}
+/* End Our Services Section */
+
+/* Start Special Offer Section */
+.specialOffer {
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(51,33,29, 85%),
+    rgba(51,33,29, 85%)), url(../image/bg.jpg);
+    background-position: center;
+    min-height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.specialOffer::after {
+    content: "";
+    position: absolute;
+    background-image: url(../image/overlay-bottom.png);
+    bottom: -1px;
+    width: 100%;
+    height: 15px;
+}
+
+.specialOffer::before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/overlay-top.png);
+    top: -1px;
+    width: 100%;
+    height: 15px;
+}
+
+.specialOffer p:nth-child(3) {
+    font-size: var(--medium);
+    font-weight: 400;
+    color: white;
+    text-align: center;
+}
+
+.specialOffer form {
+    display: flex;
+}
+
+.specialOffer form input {
+    height: 58px;
+    width: 250px;
+    padding: 20px;
+    border: none;
+}
+
+.specialOffer form button {
+    height: 58px;
+    width: 110px;
+    padding: 20px;
+    border: none;
+    background-color: var(--lightCoffee);
+    font-weight: 500;
+    cursor: pointer;
+}
+/* End Special Offer Section */
+
+/* Start Coffee Menu Section */
+.coffeeMenu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.coffeeMenu div {
+    flex-basis: 48%;
+}
+
+.coffeeMenu .menuHeader {
+    font-size: var(--large);
+    font-weight: 700;
+    color: var(--darkCoffee);
+}
+
+.coffeeMenu .menu .image img {
+    float: left;
+    border-radius: 50%;
+    width: 150px;
+    margin: 0 30px 50px 0;
+}
+
+.coffeeMenu .menu .image {
+    position: relative;
+    width: 150px;
+}
+
+.coffeeMenu .menu .image:after {
+    position: absolute;
+    content: "$7";
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    background-color: var(--lightCoffee);
+    right: 0;
+}
+
+.coffeeMenu .menu .text p:first-child {
+    color: var(--darkCoffee);
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.coffeeMenu .menu .text p:last-child {
+    color: var(--smallText);
+}
+/* End Coffee Menu Section */
+
+/* Start Online Reservation Section */
+.onlineReserv {
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(51,33,29, 85%),
+    rgba(51,33,29, 85%)), url(../image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 100px;
+}
+
+.onlineReserv::after {
+    content: "";
+    position: absolute;
+    background-image: url(../image/overlay-bottom.png);
+    bottom: -1px;
+    width: 100%;
+    height: 15px;
+}
+
+.onlineReserv::before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/overlay-top.png);
+    top: -1px;
+    width: 100%;
+    height: 15px;
+}
+
+.onlineReserv div {
+    flex-basis: 50%;
+}
+
+.leftSide {
+    padding: 50px;
+}
+
+.leftSide p:nth-child(3) {
+    font-size: var(--small);
+    line-height: 25px;
+    color: white;
+}
+
+.leftSide li {
+    list-style: none;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    line-height: 50px;
+}
+
+.leftSide li i {
+    color: var(--lightCoffee);
+    font-size: 1.3rem;
+    margin: 0 5px 0 0;
+}
+
+.rightSide > p {
+    text-align: center;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin: 0;
+}
+
+.rightSide {
+    height: 872.094px;
+    background-image: linear-gradient(0deg, rgba(51,33,29, 85%),
+    rgba(51,33,29, 85%));
+    padding-top: 150px;
+}
+
+.rightSide form {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 20px;
+}
+
+.rightSide form input {
+    height: 58px;
+    width: 100%;
+    padding: 20px;
+    border: var(--lightCoffee) 1px solid;
+    background-color: transparent;
+}
+
+.rightSide form button {
+    font-weight: 500;
+    height: 58px;
+    width: 100%;
+    padding: 20px;
+    border: none;
+    background-color: var(--lightCoffee);
+    cursor: pointer;
+}
+/* End Online Reservation Section */
+
+/* Start Testimonial Section */
+.testimonySection .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.testimonySection .testimony {
+    flex-basis: 30%;
+    color: var(--smallText);
+}
+
+.testimony .clientDetails img{
+    float: left;
+    padding-right: 20px;
+    width: 150px;
+}
+
+.testimony .clientDetails .clear{
+    clear: both;
+}
+
+.testimony .clientDetails p:first-of-type {
+    padding-top: 20px;  
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.testimony .clientDetails p:last-of-type {
+    font-size: var(--small);
+    line-height: 25px;
+    color: var(--smallText);
+    font-style: italic;
+}
+
+.scroll {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.scroll div {
+    width: 25px;
+    height: 25px;
+    background-color: var(--lightCoffee);
+    border-radius: 50%;
+}
+
+.scroll .circle {
+    width: 50px;
+    height: 25px;
+    background-color: var(--darkCoffee);
+    border-radius: 40px;
+}
+/* End Testimonial Section */
+
+/* Start Footer Section */
+.footerInfo {
+    position: relative;
+    background-image: linear-gradient(0deg, rgba(51,33,29, 85%),
+    rgba(51,33,29, 85%)), url(../image/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 60vh;
+    margin-top: 100px;
+    color: white;
+}
+
+.footerInfo::before {
+    content: "";
+    position: absolute;
+    background-image: url(../image/overlay-top.png);
+    top: -1px;
+    width: 100%;
+    height: 15px;
+}
+
+.footerInfo .container{
+    display: flex;
+    padding-top: 100px;
+}
+
+.footerInfo .info {
+    flex-basis: 25%;
+}
+
+.footerInfo .info .upper {
+    text-transform: uppercase;
+}
+
+.iconsRow {
+    display: flex;
+    gap: 10px;
+}
+
+.iconsRow .icons {
+    flex-basis: 60px;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+    border: white 1px solid;
+}
+
+.iconsRow .icons a {
+    color: white;
+}
+
+.footerInfo .info form {
+    display: flex;
+}
+
+.footerInfo .info form input {
+    height: 58px;
+    width: 250px;
+    padding: 20px;
+    border: none;
+}
+
+.footerInfo .info form button {
+    height: 58px;
+    width: 110px;
+    padding: 20px;
+    border: none;
+    background-color: var(--lightCoffee);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.copyrightFooter {
+    text-align: center;
+    margin-top: 100px;
+    padding: 10px;
+    border-top: #4b3933 solid 1px;
+}
+
+.copyrightFooter span {
+    color: var(--lightCoffee);
+}
+
+.copyrightFooter .upArrow {
+    position: fixed;
+    bottom: 30px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    line-height: 50px;
+    background-color: var(--lightCoffee);
+}
+
+.copyrightFooter .upArrow a {
+    color: var(--darkCoffee);
+}
+
+/* End Footer Section */
+
+/* Start Media Quaries */
+@media (max-width: 915px) {
+    :root {
+        --medium: 1.5rem;
+        --large: 2rem;
+        --xlarge: 2.2rem;
+        --xxxlarge: 5rem;
+    }
+
+    .sectionTitle .verticalLine {
+        margin-top: 50px;
+    }
+
+    .toggleButton {
+        display: flex;
+    }
+
+    header .navbar {
+        display: none;
+        width: 100%;
+        margin-right: 0;
+    }
+
+    header .navbar .navbarLinks {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        right: 0;
+    }
+
+    header .navbar ul .link {
+        padding-top: 16px;
+        background-color: var(--darkCoffee);
+        width: 275px;
+        height: 60px;
+        text-align: left;
+    }
+
+    header .navbar.active {
+        display: flex;
+    }
+
+    main {
+        min-height: 500px;
+    }
+
+    .aboutSection .aboutImage {
+        display: none;
+    }
+
+    .aboutSection {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .ourStory p:nth-child(1),
+    .ourVision p:first-of-type {
+        text-align: center;
+    }
+
+    .aboutSection button {
+        margin: 50px auto;
+    }
+
+    .ourServices {
+        gap: 40px;
+        justify-content: center;
+    }
+
+    .ourServices .services {
+        text-align: center;
+    }
+
+    .ourServices .services img {
+        margin-bottom: 30px;
+    }
+
+    .ourServices .services p i {
+        line-height: 55px;
+        width: 55px;
+        height: 55px;
+    }
+
+    .specialOffer form input {
+        width: 200px;
+    }
+
+    .coffeeMenu {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .coffeeMenu .menuHeader {
+        display: none;
+    }
+
+    .mobileWidth {
+        width: 100%;
+    }
+
+    .onlineReserv {
+        flex-direction: column;
+    }
+
+    .leftSide {
+        padding: 75px 50px 50px;
+    }
+
+    .testimonySection .container{
+        flex-direction: column;
+    }
+
+    .scroll {
+        display: none;
+    }
+
+    .footerInfo .container {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .copyrightFooter .upArrow {
+        right: 20px;
+    }
+}
+
+@media (max-width: 320px) {
+    :root {
+        --xlarge: 1.9rem;
+    }
+}
+
+@media (max-width: 1620px) {
+    :root {
+        --medium: 1.2rem;
+    }
+
+    .ourServices .services p i {
+        line-height: 55px;
+        width: 55px;
+        height: 55px;
+    }
+}
+/* End Media Quaries */
